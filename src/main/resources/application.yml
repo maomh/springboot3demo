@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    username: demo
+    password: demo
+    url: jdbc:mysql://localhost:3306/demo?useSSL=false&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 1
+      connection-test-query: SELECT 1
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 50
+          fetch_size: 100
+  security:
+    user:
+      name: debug
+      password: debug
+      roles: ADMIN
