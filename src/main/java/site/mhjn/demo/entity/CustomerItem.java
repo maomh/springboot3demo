@@ -15,7 +15,7 @@ import java.util.Set;
 public class CustomerItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long customerItemId;
+    private Long customerItemId;
 
     @ManyToOne
     @JoinColumn(name = "activity_id")

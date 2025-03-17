@@ -12,3 +12,12 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+
+
+management:
+  endpoint:
+    health:
+      access: none
+  endpoints:
+    access:
+      default: none

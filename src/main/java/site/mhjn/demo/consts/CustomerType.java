@@ -3,6 +3,7 @@ package site.mhjn.demo.consts;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Converter;
 import lombok.Getter;
+import org.springframework.stereotype.Component;
 
 @Getter
 @Convert(converter = CustomerLevel.CustomerLevelConverter.class)
