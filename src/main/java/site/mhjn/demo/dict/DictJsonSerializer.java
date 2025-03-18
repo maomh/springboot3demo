@@ -1,4 +1,4 @@
-package site.mhjn.demo.consts;
+package site.mhjn.demo.dict;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
@@ -10,7 +10,7 @@ import java.io.IOException;
 
 @Getter
 @RequiredArgsConstructor
-public class DictItemJsonSerializer<T extends DictItem<C>, C> extends JsonSerializer<T> {
+public class DictJsonSerializer<T extends Dict<C>, C> extends JsonSerializer<T> {
     private final Class<T> clazz;
 
     @Override

@@ -3,6 +3,7 @@ package site.mhjn.demo.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -17,6 +18,6 @@ public class Activity {
     private String name;
 
     @OneToMany(mappedBy = "activity", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<CustomerItem> customerItems;
+    private Set<ActivityCustomerType> activityCustomerTypes = new HashSet<>();
 
 }

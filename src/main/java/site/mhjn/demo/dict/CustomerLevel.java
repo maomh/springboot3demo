@@ -1,4 +1,4 @@
-package site.mhjn.demo.consts;
+package site.mhjn.demo.dict;
 
 
 import jakarta.persistence.Convert;
@@ -7,7 +7,7 @@ import lombok.Getter;
 
 @Getter
 @Convert(converter = CustomerLevel.CustomerLevelConverter.class)
-public enum CustomerLevel implements DictItem<String> {
+public enum CustomerLevel implements Dict<String> {
     STAR1("STAR1", "1星"),
     STAR2("STAR2", "2星"),
     STAR3("STAR3", "3星"),
@@ -24,7 +24,7 @@ public enum CustomerLevel implements DictItem<String> {
     }
 
     @Converter(autoApply = true)
-    public static class CustomerLevelConverter extends DictItemConverter<CustomerLevel, String> {
+    public static class CustomerLevelConverter extends DictConverter<CustomerLevel, String> {
         public CustomerLevelConverter() {
             super(CustomerLevel.class);
         }

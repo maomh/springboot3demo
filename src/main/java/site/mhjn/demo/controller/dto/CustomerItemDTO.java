@@ -1,11 +1,12 @@
 package site.mhjn.demo.controller.dto;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import site.mhjn.demo.consts.CustomerType;
+import site.mhjn.demo.dict.CustomerLevel;
+import site.mhjn.demo.dict.CustomerType;
+
+import java.util.List;
 
 @Data
 public class CustomerItemDTO {
@@ -13,7 +14,7 @@ public class CustomerItemDTO {
     private String name;
 
     @NotNull
-//    @JsonDeserialize(using = CustomerType.CustomerTypeJsonDeserializer.class)
-//    @JsonSerialize(using = CustomerType.CustomerTypeJsonSerializer.class)
-    private CustomerType type;
+    private CustomerType customerType;
+
+    private List<CustomerLevel> customerLevels;
 }

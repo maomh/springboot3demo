@@ -1,13 +1,12 @@
-package site.mhjn.demo.consts;
+package site.mhjn.demo.dict;
 
 import jakarta.persistence.Convert;
 import jakarta.persistence.Converter;
 import lombok.Getter;
-import org.springframework.stereotype.Component;
 
 @Getter
 @Convert(converter = CustomerLevel.CustomerLevelConverter.class)
-public enum CustomerType implements DictItem<String> {
+public enum CustomerType implements Dict<String> {
     CPC("CPC", "A"),
     PC("PC", "PC"),
     D("D", "D");
@@ -21,7 +20,7 @@ public enum CustomerType implements DictItem<String> {
     }
 
     @Converter(autoApply = true)
-    public static class CustomerTypeConverter extends DictItemConverter<CustomerType, String> {
+    public static class CustomerTypeConverter extends DictConverter<CustomerType, String> {
         public CustomerTypeConverter() {
             super(CustomerType.class);
         }

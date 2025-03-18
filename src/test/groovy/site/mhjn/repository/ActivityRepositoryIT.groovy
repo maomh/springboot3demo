@@ -3,10 +3,10 @@ package site.mhjn.repository
 import jakarta.annotation.Resource
 import org.springframework.test.annotation.Rollback
 import site.mhjn.SpringIntegrationBootstrap
-import site.mhjn.demo.consts.CustomerLevel
-import site.mhjn.demo.consts.CustomerType
+import site.mhjn.demo.dict.CustomerLevel
+import site.mhjn.demo.dict.CustomerType
 import site.mhjn.demo.entity.Activity
-import site.mhjn.demo.entity.CustomerItem
+import site.mhjn.demo.entity.ActivityCustomerType
 import site.mhjn.demo.repository.ActivityRepository
 
 import java.time.LocalDateTime
@@ -23,8 +23,8 @@ class ActivityRepositoryIT extends SpringIntegrationBootstrap {
 
         activity.name = "Test"
 
-        activity.customerItems = [
-                new CustomerItem(
+        activity.activityCustomerTypes = [
+                new ActivityCustomerType(
                         createTime: LocalDateTime.now(),
                         customerType: CustomerType.CPC,
                         customerLevels: [

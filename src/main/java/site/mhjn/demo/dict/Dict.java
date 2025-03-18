@@ -1,6 +1,6 @@
-package site.mhjn.demo.consts;
+package site.mhjn.demo.dict;
 
-public interface DictItem<C> {
+public interface Dict<C> {
     /**
      * 获取字典项的编码
      */

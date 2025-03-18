@@ -2,20 +2,21 @@ package site.mhjn.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import site.mhjn.demo.consts.CustomerType;
-import site.mhjn.demo.consts.DictItemJsonDeserializer;
-import site.mhjn.demo.consts.DictItemJsonSerializer;
+import site.mhjn.demo.dict.CustomerType;
+import site.mhjn.demo.dict.DictJsonDeserializer;
+import site.mhjn.demo.dict.DictJsonSerializer;
 
-@Configuration
+//@Configuration
 public class DictConfig {
 
     @Bean
-    public DictItemJsonDeserializer<CustomerType, String> customerTypeJsonDeserializer() {
-        return new DictItemJsonDeserializer<>(CustomerType.class);
+    public DictJsonDeserializer<CustomerType, String> customerTypeJsonDeserializer() {
+        return new DictJsonDeserializer<>(CustomerType.class);
     }
 
     @Bean
-    public DictItemJsonSerializer<CustomerType, String> customerTypeJsonSerializer() {
-        return new DictItemJsonSerializer<>(CustomerType.class);
+    public DictJsonSerializer<CustomerType, String> customerTypeJsonSerializer() {
+        return new DictJsonSerializer<>(CustomerType.class);
     }
+
 }

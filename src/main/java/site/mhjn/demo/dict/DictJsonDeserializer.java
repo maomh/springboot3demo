@@ -1,4 +1,4 @@
-package site.mhjn.demo.consts;
+package site.mhjn.demo.dict;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -10,9 +10,8 @@ import java.io.IOException;
 
 @Getter
 @RequiredArgsConstructor
-public class DictItemJsonDeserializer<T extends DictItem<C>, C> extends JsonDeserializer<T> {
+public class DictJsonDeserializer<T extends Dict<C>, C> extends JsonDeserializer<T> {
     private final Class<T> clazz;
-
 
     @Override
     public T deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {

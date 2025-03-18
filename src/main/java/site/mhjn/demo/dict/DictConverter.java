@@ -1,10 +1,10 @@
-package site.mhjn.demo.consts;
+package site.mhjn.demo.dict;
 
 import jakarta.persistence.AttributeConverter;
 
-public abstract class DictItemConverter<T extends DictItem<C>, C> implements AttributeConverter<T, C> {
+public abstract class DictConverter<T extends Dict<C>, C> implements AttributeConverter<T, C> {
     private final Class<T> clazz;
-    public DictItemConverter(Class<T> clazz) {
+    public DictConverter(Class<T> clazz) {
         this.clazz = clazz;
     }
 
