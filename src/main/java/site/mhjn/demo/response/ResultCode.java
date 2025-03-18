@@ -1,4 +1,4 @@
-package site.mhjn.demo.assets;
+package site.mhjn.demo.response;
 
 import lombok.Getter;
 

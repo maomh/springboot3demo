@@ -1,4 +1,4 @@
-package site.mhjn.demo.assets.exception;
+package site.mhjn.demo.exception;
 
 public class BusinessException extends RuntimeException {
 

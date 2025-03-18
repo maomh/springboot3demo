@@ -9,7 +9,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider;
 import org.springframework.core.type.filter.AssignableTypeFilter;
 import org.springframework.stereotype.Component;
-import site.mhjn.demo.assets.kit.CollectionKit;
+import site.mhjn.demo.kit.CollectionKit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,11 +18,7 @@ import java.util.List;
 @Component
 @SuppressWarnings("all")
 public class ObjectMapperBeanPostProcessor implements BeanPostProcessor {
-
-//    @Autowired(required = false)
     private List<DictJsonDeserializer> deserializers;
-
-//    @Autowired(required = false)
     private List<DictJsonSerializer> serializers;
 
     public ObjectMapperBeanPostProcessor(

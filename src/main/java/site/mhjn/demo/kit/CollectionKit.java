@@ -1,4 +1,4 @@
-package site.mhjn.demo.assets.kit;
+package site.mhjn.demo.kit;
 
 import lombok.experimental.UtilityClass;
 
@@ -14,5 +14,4 @@ public class CollectionKit {
     public static boolean isNotEmpty(Collection<?> collection) {
         return !isEmpty(collection);
     }
-
 }

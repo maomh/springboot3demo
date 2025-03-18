@@ -1,10 +1,10 @@
-package site.mhjn.demo.assets;
+package site.mhjn.demo.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import org.springframework.validation.FieldError;
-import site.mhjn.demo.assets.exception.BusinessException;
-import site.mhjn.demo.assets.kit.StringKit;
+import site.mhjn.demo.exception.BusinessException;
+import site.mhjn.demo.kit.StringKit;
 
 import java.util.HashSet;
 import java.util.List;

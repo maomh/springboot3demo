@@ -1,4 +1,4 @@
-package site.mhjn.demo.assets.kit;
+package site.mhjn.demo.kit;
 
 import lombok.experimental.UtilityClass;
 

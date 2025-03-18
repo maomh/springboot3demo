@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import site.mhjn.demo.assets.Result;
+import site.mhjn.demo.response.Result;
 import site.mhjn.demo.controller.dto.CustomerItemDTO;
 import site.mhjn.demo.entity.Activity;
 import site.mhjn.demo.entity.ActivityCustomerType;

@@ -1,15 +1,12 @@
 package site.mhjn.demo.controller.advice;
 
-import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import site.mhjn.demo.assets.Result;
-import site.mhjn.demo.assets.exception.BusinessException;
-
-import java.util.Set;
+import site.mhjn.demo.response.Result;
+import site.mhjn.demo.exception.BusinessException;
 
 @Slf4j
 @ControllerAdvice
