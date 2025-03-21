@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.Resource;
 import jakarta.persistence.EntityManager;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,12 +44,16 @@ public class DemoController {
         activityCustomerType.setCustomerType(customerItemDTO.getCustomerType());
         activityCustomerType.setCustomerLevels(Set.copyOf(customerItemDTO.getCustomerLevels()));
 
-
         activityCustomerType.setActivity(activity);
         activity.getActivityCustomerTypes().add(activityCustomerType);
 
         activityRepository.save(activity);
 
         return Result.success(activity);
+    }
+
+    @GetMapping({"", "/index"})
+    public Result index(HttpServletRequest request) {
+        return Result.success(request.getServletContext().getFilterRegistrations().entrySet());
     }
 }

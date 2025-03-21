@@ -26,3 +26,5 @@ spring:
       name: debug
       password: debug
       roles: ADMIN
+    filter:
+      order: -100

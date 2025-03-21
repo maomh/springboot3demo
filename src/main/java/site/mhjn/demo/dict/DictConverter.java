@@ -4,7 +4,8 @@ import jakarta.persistence.AttributeConverter;
 
 public abstract class DictConverter<T extends Dict<C>, C> implements AttributeConverter<T, C> {
     private final Class<T> clazz;
-    public DictConverter(Class<T> clazz) {
+
+    DictConverter(Class<T> clazz) {
         this.clazz = clazz;
     }
 

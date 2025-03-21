@@ -3,6 +3,7 @@ package site.mhjn.demo.entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
